@@ -49,6 +49,7 @@ class Propagator(nn.Module):
         S = D.dot(W).dot(D)
         A = scipy.sparse.identity(w1*h1) - self.beta*S
         A = A.tocsc()
+        print(A.dtype)
         solver = scipy.sparse.linalg.factorized(A)
         V = np.zeros((h1*w1,k))
         V[:,0] = solver(B[:,0])

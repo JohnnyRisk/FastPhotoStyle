@@ -7,7 +7,6 @@ import time
 import numpy as np
 from PIL import Image
 import tifffile
-from torch.autograd import Variable
 import torchvision.transforms as transforms
 import torchvision.utils as utils
 import torch.nn as nn
